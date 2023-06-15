@@ -22,10 +22,23 @@ for (let y = 0; y < 29; y++) {
 }
 const squares = document.querySelectorAll(".square")
 colorPicker.addEventListener("input",()=>{
-    var selectedColor = colorPicker.value
+    const selectedColor = colorPicker.value
     squares.forEach(square => square.addEventListener('mouseover',()=> {
         square.style.backgroundColor = selectedColor  
 })) 
 })
 
 
+const clear = document.getElementById("clear")
+
+clear.addEventListener('click',()=> {
+    squares.forEach(square => square.style.backgroundColor = "white")
+})
+
+const inputRange = document.getElementById("size-range")
+const sizeSpans = document.querySelectorAll(".size-span")
+
+inputRange.addEventListener("input",()=>{
+    const rangeValue = inputRange.value
+    sizeSpans.forEach(size => size.textContent = rangeValue)
+})
