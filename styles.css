@@ -2,14 +2,17 @@ body{
     margin: 0;
 }
 .bg-container{
-    background-color: #DEDEE0;
+    background-image: url('./images/bg.png');
     height: 100vh;
+    text-align: center;
+    font-family: 'Tilt Prism';
+    letter-spacing: 0.2rem;
+    font-weight: bold;
 }
 .heading{
-    color: #333;
+    color: #ffc600;
     margin: 0;
     font-size: 3rem;
-    font-family:'Roboto',sans-serif;
     font-weight: 700;
     text-align: center;
     padding-top: 2rem;
@@ -20,32 +23,53 @@ body{
     gap: 5rem;
     margin-top: 2rem;
 }
+
+.color-palette-container{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.color-palette-container label{
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
 .color-palette{
     width: 6rem;
-    height: 6rem;
+    height: 4rem;
     border: 0;
     background-color: transparent;
     padding: 0;
 }
+
 .color-palette::-webkit-color-swatch {
-    border-radius: 4rem;
-    border: 0;
+    border: 1px salmon dotted;
+}
+
+.select-mode{
+    font-size: 2rem;
+    color:#fff;
+    font-weight: bold;
 }
 .button-container{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    gap: 1rem;
 }
 .btn{
     border-radius: 0.3rem;
-    color: #333;
+    color: #000;
     border: 0;
     font-size: 1rem;
     padding: 0.8rem 2rem;
     width: 80%;
     transition: 0.2s ease-in-out;
     cursor: pointer;
+    font-family: 'Tilt Prism';
+    font-weight: 800;
+    letter-spacing: 0.2rem;
 }
 .btn:hover{
     transform: scale(1.1);
@@ -56,9 +80,8 @@ body{
 }
 
 .size{
-    color:#333;
+    color:salmon;
     font-size: 1.5rem;
-    font-family: 'Roboto',sans-serif;
     margin: 0;
 }
 input[type = range]{
@@ -69,7 +92,9 @@ input[type = range]{
     cursor: pointer;   
 }
 
-
+input[type ="range"]::-webkit-slider-runnable-track{
+    background-color: #ffc600;
+}
 input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none; /* Override default look */
     appearance: none;
@@ -85,8 +110,8 @@ input[type="range"]::-webkit-slider-thumb {
     font-weight: bolder;
 }
 .container{
-    width: 30rem;
-    height: 30rem;
+    width: 37.5rem;
+    height: 38rem;
 }
 .drawing-area{
     display: flex;

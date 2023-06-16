@@ -11,12 +11,12 @@ buttons.forEach(button => button.addEventListener('click', () => {
 const colorPicker = document.getElementById("color-picker")
 
 
-for (let x = 0; x < 30; x++) {
+for (let x = 0; x < 40; x++) {
     const square = document.createElement("div")
     square.classList.add("square")
     drawingArea.appendChild(square)
 }
-for (let y = 0; y < 29; y++) {
+for (let y = 0; y < 37; y++) {
     const clone = drawingArea.cloneNode(true)
     container.appendChild(clone)   
 }

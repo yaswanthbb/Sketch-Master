@@ -5,14 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Tilt Prism' rel='stylesheet'>
     <title>Sketch Pad</title>
   </head>
   <body>
     <div class="bg-container">
-        <h1 class="heading">Sketch Pad</h1>
+      <!-- <img src="./images/Sketch-Master.png" alt=""> -->
+      <h1 class="heading">Sketch Master</h1>
         <div class="content-container">
             <div class="button-container">
-                <input id="color-picker" type="color" class = "color-palette"></>
+              <div class="color-palette-container">
+                <label for="color-picker">Pick a Color</label>
+                <input id="color-picker" type="color" class = "color-palette">
+              </div>
+              <h1 class="select-mode">Select Mode</h1>
                 <button class="btn" id= "color-mode">Color Mode</button>
                 <button class="btn" id= "rainbow-mode">Rainbow Mode</button>
                 <button class="btn" id= "eraser"> Eraser</button>
