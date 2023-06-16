@@ -23,9 +23,7 @@ for (let y = 0; y < 29; y++) {
 const squares = document.querySelectorAll(".square")
 colorPicker.addEventListener("input",()=>{
     const selectedColor = colorPicker.value
-    squares.forEach(square => square.addEventListener('mouseover',()=> {
-        square.style.backgroundColor = selectedColor  
-})) 
+    colormode(selectedColor)  
 })
 
 
@@ -42,3 +40,30 @@ inputRange.addEventListener("input",()=>{
     const rangeValue = inputRange.value
     sizeSpans.forEach(size => size.textContent = rangeValue)
 })
+
+const eraser = document.getElementById("eraser")
+
+eraser.addEventListener('click',()=>{
+    squares.forEach(square => square.addEventListener('mouseover',()=> {
+        square.style.backgroundColor = "#fff" 
+})) 
+})
+
+
+const rainbowMode = document.getElementById("rainbow-mode")
+
+rainbowMode.addEventListener('click',()=>{
+    squares.forEach(square => square.addEventListener('mouseover',()=>{
+        square.style.backgroundColor = `#${Math.floor(Math.random()*16777215).toString(16)}`
+
+    }))
+})
+
+const colormode = (selectedColor)=>{
+    const colorMode = document.getElementById("color-mode")
+    colorMode.addEventListener('click',()=>{
+        squares.forEach(square => square.addEventListener('mouseover',()=>{
+            square.style.backgroundColor = selectedColor
+        }))
+    })
+}
