@@ -2,7 +2,8 @@ body{
     margin: 0;
 }
 .bg-container{
-    background-image: url('./images/bg.png');
+    background-image: url('./images/bg.jpg');
+    background-size: cover;
     height: 100vh;
     text-align: center;
     font-family: 'Tilt Prism';
@@ -63,17 +64,19 @@ body{
     color: #000;
     border: 0;
     font-size: 1rem;
-    padding: 0.8rem 2rem;
+    padding: 0.8rem 2rem;box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
     width: 80%;
     transition: 0.2s ease-in-out;
     cursor: pointer;
     font-family: 'Tilt Prism';
     font-weight: 800;
     letter-spacing: 0.2rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .btn:hover{
     transform: scale(1.1);
     border: 1px solid grey;
+    box-shadow: #ffc600 0px 5px 15px;
 }
 .active{
     background-color: #ffc600;
@@ -117,8 +120,6 @@ input[type="range"]::-webkit-slider-thumb {
     display: flex;
 }
 .square{
-    /* width: 1rem;
-    height: 1rem; */
     background-color: #fff;
     transition: 0.1s ease;
 }
